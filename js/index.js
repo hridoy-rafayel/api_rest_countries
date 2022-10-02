@@ -25,15 +25,28 @@ const displyCountries = (countries) => {
 
 
   //========= option 1
-const getCountryHTML = country => {
-    const {name, flags} = country;
+// const getCountryHTML = country => {
+//     const {name, flags} = country;
+//     return `
+//         <div class="country"> 
+//         <img src="${flags.png}" />
+//         <h2>${name.common}</h2>
+//         </div>
+//     `;
+// }
+
+
+    //========== Option 2
+const getCountryHTML = ({name, flags, area, capital}) => {
+    // const {name, flags, area, capital} = country;
     return `
         <div class="country"> 
         <img src="${flags.png}" />
         <h2>${name.common}</h2>
+        <p>Capital: ${capital}</p>
+        <p>Area: ${area}</p>
         </div>
     `;
 }
-
 
 loadCountries();
